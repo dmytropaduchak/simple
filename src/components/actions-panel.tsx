@@ -1,6 +1,4 @@
 import { ExternalLinkIcon } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
 import catalog from "@/data/actions.json"
 
 type Action = (typeof catalog.actions)[number]
@@ -19,22 +17,9 @@ export function ActionsPanel() {
   const groups = groupByCategory(catalog.actions)
 
   return (
-    <div className="flex max-h-[min(78svh,40rem)] min-h-0 w-full flex-col gap-4 overflow-hidden rounded-xl border border-border/60 bg-background/70 p-4 backdrop-blur-sm md:max-h-[min(82svh,44rem)] md:p-5">
-      <div className="flex shrink-0 flex-col gap-1">
-        <div className="flex flex-wrap items-center gap-2">
-          <h1 className="text-xl font-medium tracking-tight">Simple Actions</h1>
-          <Badge variant="secondary">{catalog.count}</Badge>
-        </div>
-        <p className="text-sm text-muted-foreground">
-          Small GitHub Actions for PR risk, quality, and CI hygiene. Open
-          Marketplace for install YAML.
-        </p>
-      </div>
-
-      <Separator className="shrink-0" />
-
+    <div className="flex max-h-[min(70svh,36rem)] min-h-0 w-full flex-col overflow-hidden rounded-xl border border-border/60 bg-background/70 p-3 backdrop-blur-sm md:max-h-[min(72svh,40rem)] md:p-4">
       <div className="scrollbar-none min-h-0 flex-1 overflow-y-auto overscroll-contain">
-        <div className="flex flex-col gap-6 pb-2">
+        <div className="flex flex-col gap-6 pb-1">
           {groups.map(([category, actions]) => (
             <section key={category} className="flex flex-col gap-2">
               <h2 className="text-xs font-medium tracking-wider text-muted-foreground uppercase">
