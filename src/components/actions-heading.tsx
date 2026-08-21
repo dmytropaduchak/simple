@@ -11,8 +11,8 @@ export function ActionsHeading() {
         <Badge variant="secondary">{catalog.count}</Badge>
       </div>
       <p className="max-w-md text-sm text-muted-foreground md:text-base">
-        Small GitHub Actions for PR risk, quality, and CI hygiene. Open
-        Marketplace for install YAML.
+        Ready-to-use checks for pull requests—catch risk, quality gaps, and
+        messy CI before they merge. Browse below, then install from Marketplace.
       </p>
     </div>
   )
