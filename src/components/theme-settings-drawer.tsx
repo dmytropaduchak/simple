@@ -214,7 +214,7 @@ function StyleConfig() {
         onReset={() => setThemeStyle("black-white")}
         resetAriaLabel="Reset style to black and white"
       />
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-2 gap-3">
         {THEME_STYLE_PRESETS.map((preset) => {
           const selected = appearance.themeStyle === preset.id
           return (
@@ -226,20 +226,30 @@ function StyleConfig() {
                 setThemeStyle(preset.id)
               }}
               className={cn(
-                "relative flex items-center gap-2 rounded-lg border px-2.5 py-2 text-left text-sm font-medium transition-colors",
+                "relative flex flex-col gap-2 rounded-lg border p-3 text-left text-sm transition-colors",
                 selected
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "border-border bg-background text-foreground hover:bg-muted",
+                  ? "border-primary bg-primary/5"
+                  : "border-border hover:bg-muted/50",
               )}
               aria-pressed={selected}
             >
-              <span
-                className="size-3.5 shrink-0 rounded-full border border-border"
-                style={{
-                  background: `linear-gradient(135deg, ${preset.swatch[0]} 0% 40%, ${preset.swatch[1]} 40% 70%, ${preset.swatch[2]} 70% 100%)`,
-                }}
+              <div className="flex items-center gap-1.5">
+                {preset.swatch.map((color) => (
+                  <span
+                    key={color}
+                    className="size-3.5 rounded-full border border-border"
+                    style={{ backgroundColor: color }}
+                  />
+                ))}
+              </div>
+              <span className="font-medium">{preset.label}</span>
+              <CircleCheck
+                className={cn(
+                  "absolute top-0 right-0 size-6 translate-x-1/2 -translate-y-1/2 fill-primary stroke-white",
+                  !selected && "hidden",
+                )}
+                aria-hidden="true"
               />
-              {preset.label}
             </button>
           )
         })}

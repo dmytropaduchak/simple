@@ -1,15 +1,73 @@
-import { useMemo, useState } from "react"
+import { useMemo, useState, type CSSProperties } from "react"
 import { Search } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import catalog from "@/data/actions.json"
 
+const CATEGORY_HUE: Record<string, number> = {
+  "Code quality": 250,
+  "Code review": 290,
+  "Continuous integration": 200,
+  "Dependency management": 55,
+  "Project management": 85,
+  Publishing: 330,
+  Security: 25,
+  Testing: 145,
+  Utilities: 220,
+}
+
+const SUBCATEGORY_HUE: Record<string, number> = {
+  Audit: 175,
+  Scan: 265,
+  Check: 130,
+  Lint: 315,
+  Report: 210,
+  Suggest: 95,
+  Gate: 155,
+  Validate: 280,
+  Risk: 15,
+}
+
 function subcategoryOf(name: string) {
   const slug = name.startsWith("simple-") ? name.slice("simple-".length) : name
   const dash = slug.lastIndexOf("-")
   const kind = dash < 0 ? slug : slug.slice(dash + 1)
   return kind ? kind[0].toUpperCase() + kind.slice(1) : kind
+}
+
+function tagHue(label: string, hues: Record<string, number>, offset: number) {
+  if (hues[label] !== undefined) return hues[label]
+  let hash = 0
+  for (const char of label) hash = (hash * 31 + char.charCodeAt(0)) >>> 0
+  return (hash + offset) % 360
+}
+
+function CatalogTag({
+  label,
+  kind,
+}: {
+  label: string
+  kind: "category" | "subcategory"
+}) {
+  const hue =
+    kind === "category"
+      ? tagHue(label, CATEGORY_HUE, 0)
+      : tagHue(label, SUBCATEGORY_HUE, 180)
+
+  return (
+    <Badge
+      variant="outline"
+      className={
+        kind === "category"
+          ? "catalog-tag-category"
+          : "catalog-tag-subcategory"
+      }
+      style={{ "--tag-hue": hue } as CSSProperties}
+    >
+      {label}
+    </Badge>
+  )
 }
 
 const ALL = "All"
@@ -107,10 +165,11 @@ export function ActionsPanel() {
                       <span className="min-w-0 truncate font-medium text-sm leading-tight group-hover:text-primary">
                         {action.name}
                       </span>
-                      <Badge variant="outline">{action.category}</Badge>
-                      <Badge variant="secondary">
-                        {subcategoryOf(action.name)}
-                      </Badge>
+                      <CatalogTag kind="category" label={action.category} />
+                      <CatalogTag
+                        kind="subcategory"
+                        label={subcategoryOf(action.name)}
+                      />
                     </div>
                     <span className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                       {action.description}
