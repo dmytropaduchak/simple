@@ -1,0 +1,478 @@
+{
+  "title": "Simple Actions",
+  "description": "Small GitHub Actions for PR risk, quality, and CI hygiene. Catalog for humans and AI agents.",
+  "owner": "dmytropaduchak",
+  "site": "https://dmytropaduchak.github.io/simple-actions/",
+  "updated": "2026-08-21",
+  "count": 52,
+  "actions": [
+    {
+      "id": "simple-agent-audit",
+      "name": "simple-agent-audit",
+      "description": "Agent-shaped PRs + AGENTS/CLAUDE/.cursor/MCP changes",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-agent-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-agent-audit",
+      "install": "- uses: dmytropaduchak/simple-agent-audit@v0.1.0"
+    },
+    {
+      "id": "simple-asset-scan",
+      "name": "simple-asset-scan",
+      "description": "Images/CSS/assets added in PR but unreferenced in code/docs",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-asset-scan",
+      "marketplace": "https://github.com/marketplace/actions/simple-asset-scan",
+      "install": "- uses: dmytropaduchak/simple-asset-scan@v0.1.0"
+    },
+    {
+      "id": "simple-blob-check",
+      "name": "simple-blob-check",
+      "description": "Large image/binary files in PR",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-blob-check",
+      "marketplace": "https://github.com/marketplace/actions/simple-blob-check",
+      "install": "- uses: dmytropaduchak/simple-blob-check@v0.1.0"
+    },
+    {
+      "id": "simple-bundle-check",
+      "name": "simple-bundle-check",
+      "description": "Bundle/size budget",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-bundle-check",
+      "marketplace": "https://github.com/marketplace/actions/simple-bundle-check",
+      "install": "- uses: dmytropaduchak/simple-bundle-check@v0.1.0"
+    },
+    {
+      "id": "simple-bypass-audit",
+      "name": "simple-bypass-audit",
+      "description": "eslint-disable / @ts-ignore / describe.only / .skip spikes in PR",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-bypass-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-bypass-audit",
+      "install": "- uses: dmytropaduchak/simple-bypass-audit@v0.1.0"
+    },
+    {
+      "id": "simple-commit-check",
+      "name": "simple-commit-check",
+      "description": "Bad PR/commit titles (length/conventional)",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-commit-check",
+      "marketplace": "https://github.com/marketplace/actions/simple-commit-check",
+      "install": "- uses: dmytropaduchak/simple-commit-check@v0.1.0"
+    },
+    {
+      "id": "simple-conflict-scan",
+      "name": "simple-conflict-scan",
+      "description": "Conflict markers left in tree",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-conflict-scan",
+      "marketplace": "https://github.com/marketplace/actions/simple-conflict-scan",
+      "install": "- uses: dmytropaduchak/simple-conflict-scan@v0.1.0"
+    },
+    {
+      "id": "simple-debug-scan",
+      "name": "simple-debug-scan",
+      "description": "Debug logs left in PR (console/pdb/debugger)",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-debug-scan",
+      "marketplace": "https://github.com/marketplace/actions/simple-debug-scan",
+      "install": "- uses: dmytropaduchak/simple-debug-scan@v0.1.0"
+    },
+    {
+      "id": "simple-dup-scan",
+      "name": "simple-dup-scan",
+      "description": "Copy-paste duplicates in PR diff (hashed windows)",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-dup-scan",
+      "marketplace": "https://github.com/marketplace/actions/simple-dup-scan",
+      "install": "- uses: dmytropaduchak/simple-dup-scan@v0.1.0"
+    },
+    {
+      "id": "simple-link-lint",
+      "name": "simple-link-lint",
+      "description": "Broken/dead links in changed Markdown (and optional HTML) before merge",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-link-lint",
+      "marketplace": "https://github.com/marketplace/actions/simple-link-lint",
+      "install": "- uses: dmytropaduchak/simple-link-lint@v0.1.0"
+    },
+    {
+      "id": "simple-policy-check",
+      "name": "simple-policy-check",
+      "description": "Org policy-as-code",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-policy-check",
+      "marketplace": "https://github.com/marketplace/actions/simple-policy-check",
+      "install": "- uses: dmytropaduchak/simple-policy-check@v0.1.0"
+    },
+    {
+      "id": "simple-readme-audit",
+      "name": "simple-readme-audit",
+      "description": "Code/version paths changed, README not",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-readme-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-readme-audit",
+      "install": "- uses: dmytropaduchak/simple-readme-audit@v0.1.0"
+    },
+    {
+      "id": "simple-swagger-check",
+      "name": "simple-swagger-check",
+      "description": "OpenAPI/Swagger breaking changes",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-swagger-check",
+      "marketplace": "https://github.com/marketplace/actions/simple-swagger-check",
+      "install": "- uses: dmytropaduchak/simple-swagger-check@v0.1.0"
+    },
+    {
+      "id": "simple-todo-audit",
+      "name": "simple-todo-audit",
+      "description": "New TODO/FIXME/HACK in PR",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-todo-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-todo-audit",
+      "install": "- uses: dmytropaduchak/simple-todo-audit@v0.1.0"
+    },
+    {
+      "id": "simple-typo-lint",
+      "name": "simple-typo-lint",
+      "description": "Typos via dictionary (comments/strings/ids)",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-typo-lint",
+      "marketplace": "https://github.com/marketplace/actions/simple-typo-lint",
+      "install": "- uses: dmytropaduchak/simple-typo-lint@v0.1.0"
+    },
+    {
+      "id": "simple-diff-report",
+      "name": "simple-diff-report",
+      "description": "PR delta digest",
+      "category": "Code review",
+      "repo": "https://github.com/dmytropaduchak/simple-diff-report",
+      "marketplace": "https://github.com/marketplace/actions/simple-diff-report",
+      "install": "- uses: dmytropaduchak/simple-diff-report@v0.1.0"
+    },
+    {
+      "id": "simple-reviewer-suggest",
+      "name": "simple-reviewer-suggest",
+      "description": "Suggest reviewers from CODEOWNERS + recent path authors",
+      "category": "Code review",
+      "repo": "https://github.com/dmytropaduchak/simple-reviewer-suggest",
+      "marketplace": "https://github.com/marketplace/actions/simple-reviewer-suggest",
+      "install": "- uses: dmytropaduchak/simple-reviewer-suggest@v0.1.0"
+    },
+    {
+      "id": "simple-concurrency-suggest",
+      "name": "simple-concurrency-suggest",
+      "description": "Missing concurrency: on PR/deploy jobs",
+      "category": "Continuous integration",
+      "repo": "https://github.com/dmytropaduchak/simple-concurrency-suggest",
+      "marketplace": "https://github.com/marketplace/actions/simple-concurrency-suggest",
+      "install": "- uses: dmytropaduchak/simple-concurrency-suggest@v0.1.0"
+    },
+    {
+      "id": "simple-pin-suggest",
+      "name": "simple-pin-suggest",
+      "description": "Suggest SHA pins for mutable Action tags",
+      "category": "Continuous integration",
+      "repo": "https://github.com/dmytropaduchak/simple-pin-suggest",
+      "marketplace": "https://github.com/marketplace/actions/simple-pin-suggest",
+      "install": "- uses: dmytropaduchak/simple-pin-suggest@v0.1.0"
+    },
+    {
+      "id": "simple-import-verify",
+      "name": "simple-import-verify",
+      "description": "New imports not in lockfile / unknown packages",
+      "category": "Dependency management",
+      "repo": "https://github.com/dmytropaduchak/simple-import-verify",
+      "marketplace": "https://github.com/marketplace/actions/simple-import-verify",
+      "install": "- uses: dmytropaduchak/simple-import-verify@v0.1.0"
+    },
+    {
+      "id": "simple-sbom-report",
+      "name": "simple-sbom-report",
+      "description": "CycloneDX from lockfile",
+      "category": "Dependency management",
+      "repo": "https://github.com/dmytropaduchak/simple-sbom-report",
+      "marketplace": "https://github.com/marketplace/actions/simple-sbom-report",
+      "install": "- uses: dmytropaduchak/simple-sbom-report@v0.1.0"
+    },
+    {
+      "id": "simple-hotfix-gate",
+      "name": "simple-hotfix-gate",
+      "description": "Release-branch PRs need hotfix label/ticket",
+      "category": "Project management",
+      "repo": "https://github.com/dmytropaduchak/simple-hotfix-gate",
+      "marketplace": "https://github.com/marketplace/actions/simple-hotfix-gate",
+      "install": "- uses: dmytropaduchak/simple-hotfix-gate@v0.1.0"
+    },
+    {
+      "id": "simple-issue-close-suggest",
+      "name": "simple-issue-close-suggest",
+      "description": "Suggest issues to close from \u201cfixes #\u201d + title tokens",
+      "category": "Project management",
+      "repo": "https://github.com/dmytropaduchak/simple-issue-close-suggest",
+      "marketplace": "https://github.com/marketplace/actions/simple-issue-close-suggest",
+      "install": "- uses: dmytropaduchak/simple-issue-close-suggest@v0.1.0"
+    },
+    {
+      "id": "simple-label-suggest",
+      "name": "simple-label-suggest",
+      "description": "Suggest labels from changed path prefixes",
+      "category": "Project management",
+      "repo": "https://github.com/dmytropaduchak/simple-label-suggest",
+      "marketplace": "https://github.com/marketplace/actions/simple-label-suggest",
+      "install": "- uses: dmytropaduchak/simple-label-suggest@v0.1.0"
+    },
+    {
+      "id": "simple-ticket-validate",
+      "name": "simple-ticket-validate",
+      "description": "PR must reference issue/Jira/Linear key",
+      "category": "Project management",
+      "repo": "https://github.com/dmytropaduchak/simple-ticket-validate",
+      "marketplace": "https://github.com/marketplace/actions/simple-ticket-validate",
+      "install": "- uses: dmytropaduchak/simple-ticket-validate@v0.1.0"
+    },
+    {
+      "id": "simple-breaking-report",
+      "name": "simple-breaking-report",
+      "description": "BREAKING CHANGE / ! commits between tags",
+      "category": "Publishing",
+      "repo": "https://github.com/dmytropaduchak/simple-breaking-report",
+      "marketplace": "https://github.com/marketplace/actions/simple-breaking-report",
+      "install": "- uses: dmytropaduchak/simple-breaking-report@v0.1.0"
+    },
+    {
+      "id": "simple-changelog-report",
+      "name": "simple-changelog-report",
+      "description": "Changelog for tag/SHA range",
+      "category": "Publishing",
+      "repo": "https://github.com/dmytropaduchak/simple-changelog-report",
+      "marketplace": "https://github.com/marketplace/actions/simple-changelog-report",
+      "install": "- uses: dmytropaduchak/simple-changelog-report@v0.1.0"
+    },
+    {
+      "id": "simple-release-check",
+      "name": "simple-release-check",
+      "description": "Release hygiene",
+      "category": "Publishing",
+      "repo": "https://github.com/dmytropaduchak/simple-release-check",
+      "marketplace": "https://github.com/marketplace/actions/simple-release-check",
+      "install": "- uses: dmytropaduchak/simple-release-check@v0.1.0"
+    },
+    {
+      "id": "simple-branch-risk",
+      "name": "simple-branch-risk",
+      "description": "Default branch protection",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-branch-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-branch-risk",
+      "install": "- uses: dmytropaduchak/simple-branch-risk@v0.1.0"
+    },
+    {
+      "id": "simple-coverage-check",
+      "name": "simple-coverage-check",
+      "description": "Coverage drop vs base",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-coverage-check",
+      "marketplace": "https://github.com/marketplace/actions/simple-coverage-check",
+      "install": "- uses: dmytropaduchak/simple-coverage-check@v0.1.0"
+    },
+    {
+      "id": "simple-dependency-risk",
+      "name": "simple-dependency-risk",
+      "description": "Risky dependency upgrades",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-dependency-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-dependency-risk",
+      "install": "- uses: dmytropaduchak/simple-dependency-risk@v0.1.0"
+    },
+    {
+      "id": "simple-dockerfile-risk",
+      "name": "simple-dockerfile-risk",
+      "description": "Dockerfile risk",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-dockerfile-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-dockerfile-risk",
+      "install": "- uses: dmytropaduchak/simple-dockerfile-risk@v0.1.0"
+    },
+    {
+      "id": "simple-env-risk",
+      "name": "simple-env-risk",
+      "description": "Env/credential files in PR",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-env-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-env-risk",
+      "install": "- uses: dmytropaduchak/simple-env-risk@v0.1.0"
+    },
+    {
+      "id": "simple-eval-audit",
+      "name": "simple-eval-audit",
+      "description": "Dangerous dynamic code: eval, Function(, exec, pickle.loads, yaml.load",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-eval-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-eval-audit",
+      "install": "- uses: dmytropaduchak/simple-eval-audit@v0.1.0"
+    },
+    {
+      "id": "simple-gitignore-audit",
+      "name": "simple-gitignore-audit",
+      "description": "Sensitive paths added but missing from .gitignore/.dockerignore",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-gitignore-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-gitignore-audit",
+      "install": "- uses: dmytropaduchak/simple-gitignore-audit@v0.1.0"
+    },
+    {
+      "id": "simple-iam-risk",
+      "name": "simple-iam-risk",
+      "description": "Cloud IaC least privilege",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-iam-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-iam-risk",
+      "install": "- uses: dmytropaduchak/simple-iam-risk@v0.1.0"
+    },
+    {
+      "id": "simple-injection-scan",
+      "name": "simple-injection-scan",
+      "description": "Prompt injection in PR: jailbreak phrases + hidden instructions (HTML comments, ZWSP/RTL/homoglyphs)",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-injection-scan",
+      "marketplace": "https://github.com/marketplace/actions/simple-injection-scan",
+      "install": "- uses: dmytropaduchak/simple-injection-scan@v0.1.0"
+    },
+    {
+      "id": "simple-k8s-risk",
+      "name": "simple-k8s-risk",
+      "description": "Unsafe K8s manifests",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-k8s-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-k8s-risk",
+      "install": "- uses: dmytropaduchak/simple-k8s-risk@v0.1.0"
+    },
+    {
+      "id": "simple-license-risk",
+      "name": "simple-license-risk",
+      "description": "Copyleft in lockfiles",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-license-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-license-risk",
+      "install": "- uses: dmytropaduchak/simple-license-risk@v0.1.0"
+    },
+    {
+      "id": "simple-lifecycle-audit",
+      "name": "simple-lifecycle-audit",
+      "description": "Install/build hooks across ecosystems: package.json scripts (npm/yarn/pnpm), composer, pip/poetry, cargo build.rs",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-lifecycle-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-lifecycle-audit",
+      "install": "- uses: dmytropaduchak/simple-lifecycle-audit@v0.1.0"
+    },
+    {
+      "id": "simple-lockfile-risk",
+      "name": "simple-lockfile-risk",
+      "description": "OSV CVEs in lockfiles",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-lockfile-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-lockfile-risk",
+      "install": "- uses: dmytropaduchak/simple-lockfile-risk@v0.1.0"
+    },
+    {
+      "id": "simple-mcp-audit",
+      "name": "simple-mcp-audit",
+      "description": "MCP configs granting shell/fs/network tools without allowlist",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-mcp-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-mcp-audit",
+      "install": "- uses: dmytropaduchak/simple-mcp-audit@v0.1.0"
+    },
+    {
+      "id": "simple-owners-audit",
+      "name": "simple-owners-audit",
+      "description": "Changed paths missing CODEOWNERS",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-owners-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-owners-audit",
+      "install": "- uses: dmytropaduchak/simple-owners-audit@v0.1.0"
+    },
+    {
+      "id": "simple-permission-risk",
+      "name": "simple-permission-risk",
+      "description": "Broad workflow permissions",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-permission-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-permission-risk",
+      "install": "- uses: dmytropaduchak/simple-permission-risk@v0.1.0"
+    },
+    {
+      "id": "simple-schema-risk",
+      "name": "simple-schema-risk",
+      "description": "Dangerous DB migrations",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-schema-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-schema-risk",
+      "install": "- uses: dmytropaduchak/simple-schema-risk@v0.1.0"
+    },
+    {
+      "id": "simple-secret-risk",
+      "name": "simple-secret-risk",
+      "description": "PR diff secrets",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-secret-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-secret-risk",
+      "install": "- uses: dmytropaduchak/simple-secret-risk@v0.1.0"
+    },
+    {
+      "id": "simple-sql-audit",
+      "name": "simple-sql-audit",
+      "description": "Dangerous SQL patterns (DELETE/UPDATE w/o WHERE, concat)",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-sql-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-sql-audit",
+      "install": "- uses: dmytropaduchak/simple-sql-audit@v0.1.0"
+    },
+    {
+      "id": "simple-workflow-risk",
+      "name": "simple-workflow-risk",
+      "description": "Workflow YAML risk",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-workflow-risk",
+      "marketplace": "https://github.com/marketplace/actions/simple-workflow-risk",
+      "install": "- uses: dmytropaduchak/simple-workflow-risk@v0.1.0"
+    },
+    {
+      "id": "simple-a11y-check",
+      "name": "simple-a11y-check",
+      "description": "Accessibility regressions",
+      "category": "Testing",
+      "repo": "https://github.com/dmytropaduchak/simple-a11y-check",
+      "marketplace": "https://github.com/marketplace/actions/simple-a11y-check",
+      "install": "- uses: dmytropaduchak/simple-a11y-check@v0.1.0"
+    },
+    {
+      "id": "simple-snapshot-audit",
+      "name": "simple-snapshot-audit",
+      "description": "Snapshots changed without test change",
+      "category": "Testing",
+      "repo": "https://github.com/dmytropaduchak/simple-snapshot-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-snapshot-audit",
+      "install": "- uses: dmytropaduchak/simple-snapshot-audit@v0.1.0"
+    },
+    {
+      "id": "simple-test-report",
+      "name": "simple-test-report",
+      "description": "Test XML/JSON summary",
+      "category": "Testing",
+      "repo": "https://github.com/dmytropaduchak/simple-test-report",
+      "marketplace": "https://github.com/marketplace/actions/simple-test-report",
+      "install": "- uses: dmytropaduchak/simple-test-report@v0.1.0"
+    },
+    {
+      "id": "simple-loc-report",
+      "name": "simple-loc-report",
+      "description": "Whole-repo language + LOC",
+      "category": "Utilities",
+      "repo": "https://github.com/dmytropaduchak/simple-loc-report",
+      "marketplace": "https://github.com/marketplace/actions/simple-loc-report",
+      "install": "- uses: dmytropaduchak/simple-loc-report@v0.1.0"
+    }
+  ]
+}

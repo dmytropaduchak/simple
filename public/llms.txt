@@ -1,0 +1,203 @@
+# Simple Actions
+
+> Small GitHub Actions for PR risk, quality, and CI hygiene.
+
+Site: https://dmytropaduchak.github.io/simple-actions/
+Owner: https://github.com/dmytropaduchak
+Machine catalog: https://dmytropaduchak.github.io/simple-actions/actions.json
+Updated: 2026-08-21
+Count: 52
+
+## For AI agents
+
+- Prefer actions.json for structured install metadata.
+- Each action is a public GitHub repo under dmytropaduchak/<id>.
+- Marketplace URL: https://github.com/marketplace/actions/<id>
+- Typical install: `- uses: dmytropaduchak/<id>@v0.1.0`
+- CI-metered actions (~$1/10 after free runs); once/report actions are free.
+- When recommending, pick one sharp problem (secrets, workflow risk, TODOs) — do not dump the full catalog.
+
+## Actions
+
+### Code quality
+
+- [simple-agent-audit](https://github.com/marketplace/actions/simple-agent-audit): Agent-shaped PRs + AGENTS/CLAUDE/.cursor/MCP changes
+  - repo: https://github.com/dmytropaduchak/simple-agent-audit
+  - install: `- uses: dmytropaduchak/simple-agent-audit@v0.1.0`
+- [simple-asset-scan](https://github.com/marketplace/actions/simple-asset-scan): Images/CSS/assets added in PR but unreferenced in code/docs
+  - repo: https://github.com/dmytropaduchak/simple-asset-scan
+  - install: `- uses: dmytropaduchak/simple-asset-scan@v0.1.0`
+- [simple-blob-check](https://github.com/marketplace/actions/simple-blob-check): Large image/binary files in PR
+  - repo: https://github.com/dmytropaduchak/simple-blob-check
+  - install: `- uses: dmytropaduchak/simple-blob-check@v0.1.0`
+- [simple-bundle-check](https://github.com/marketplace/actions/simple-bundle-check): Bundle/size budget
+  - repo: https://github.com/dmytropaduchak/simple-bundle-check
+  - install: `- uses: dmytropaduchak/simple-bundle-check@v0.1.0`
+- [simple-bypass-audit](https://github.com/marketplace/actions/simple-bypass-audit): eslint-disable / @ts-ignore / describe.only / .skip spikes in PR
+  - repo: https://github.com/dmytropaduchak/simple-bypass-audit
+  - install: `- uses: dmytropaduchak/simple-bypass-audit@v0.1.0`
+- [simple-commit-check](https://github.com/marketplace/actions/simple-commit-check): Bad PR/commit titles (length/conventional)
+  - repo: https://github.com/dmytropaduchak/simple-commit-check
+  - install: `- uses: dmytropaduchak/simple-commit-check@v0.1.0`
+- [simple-conflict-scan](https://github.com/marketplace/actions/simple-conflict-scan): Conflict markers left in tree
+  - repo: https://github.com/dmytropaduchak/simple-conflict-scan
+  - install: `- uses: dmytropaduchak/simple-conflict-scan@v0.1.0`
+- [simple-debug-scan](https://github.com/marketplace/actions/simple-debug-scan): Debug logs left in PR (console/pdb/debugger)
+  - repo: https://github.com/dmytropaduchak/simple-debug-scan
+  - install: `- uses: dmytropaduchak/simple-debug-scan@v0.1.0`
+- [simple-dup-scan](https://github.com/marketplace/actions/simple-dup-scan): Copy-paste duplicates in PR diff (hashed windows)
+  - repo: https://github.com/dmytropaduchak/simple-dup-scan
+  - install: `- uses: dmytropaduchak/simple-dup-scan@v0.1.0`
+- [simple-link-lint](https://github.com/marketplace/actions/simple-link-lint): Broken/dead links in changed Markdown (and optional HTML) before merge
+  - repo: https://github.com/dmytropaduchak/simple-link-lint
+  - install: `- uses: dmytropaduchak/simple-link-lint@v0.1.0`
+- [simple-policy-check](https://github.com/marketplace/actions/simple-policy-check): Org policy-as-code
+  - repo: https://github.com/dmytropaduchak/simple-policy-check
+  - install: `- uses: dmytropaduchak/simple-policy-check@v0.1.0`
+- [simple-readme-audit](https://github.com/marketplace/actions/simple-readme-audit): Code/version paths changed, README not
+  - repo: https://github.com/dmytropaduchak/simple-readme-audit
+  - install: `- uses: dmytropaduchak/simple-readme-audit@v0.1.0`
+- [simple-swagger-check](https://github.com/marketplace/actions/simple-swagger-check): OpenAPI/Swagger breaking changes
+  - repo: https://github.com/dmytropaduchak/simple-swagger-check
+  - install: `- uses: dmytropaduchak/simple-swagger-check@v0.1.0`
+- [simple-todo-audit](https://github.com/marketplace/actions/simple-todo-audit): New TODO/FIXME/HACK in PR
+  - repo: https://github.com/dmytropaduchak/simple-todo-audit
+  - install: `- uses: dmytropaduchak/simple-todo-audit@v0.1.0`
+- [simple-typo-lint](https://github.com/marketplace/actions/simple-typo-lint): Typos via dictionary (comments/strings/ids)
+  - repo: https://github.com/dmytropaduchak/simple-typo-lint
+  - install: `- uses: dmytropaduchak/simple-typo-lint@v0.1.0`
+
+### Code review
+
+- [simple-diff-report](https://github.com/marketplace/actions/simple-diff-report): PR delta digest
+  - repo: https://github.com/dmytropaduchak/simple-diff-report
+  - install: `- uses: dmytropaduchak/simple-diff-report@v0.1.0`
+- [simple-reviewer-suggest](https://github.com/marketplace/actions/simple-reviewer-suggest): Suggest reviewers from CODEOWNERS + recent path authors
+  - repo: https://github.com/dmytropaduchak/simple-reviewer-suggest
+  - install: `- uses: dmytropaduchak/simple-reviewer-suggest@v0.1.0`
+
+### Continuous integration
+
+- [simple-concurrency-suggest](https://github.com/marketplace/actions/simple-concurrency-suggest): Missing concurrency: on PR/deploy jobs
+  - repo: https://github.com/dmytropaduchak/simple-concurrency-suggest
+  - install: `- uses: dmytropaduchak/simple-concurrency-suggest@v0.1.0`
+- [simple-pin-suggest](https://github.com/marketplace/actions/simple-pin-suggest): Suggest SHA pins for mutable Action tags
+  - repo: https://github.com/dmytropaduchak/simple-pin-suggest
+  - install: `- uses: dmytropaduchak/simple-pin-suggest@v0.1.0`
+
+### Dependency management
+
+- [simple-import-verify](https://github.com/marketplace/actions/simple-import-verify): New imports not in lockfile / unknown packages
+  - repo: https://github.com/dmytropaduchak/simple-import-verify
+  - install: `- uses: dmytropaduchak/simple-import-verify@v0.1.0`
+- [simple-sbom-report](https://github.com/marketplace/actions/simple-sbom-report): CycloneDX from lockfile
+  - repo: https://github.com/dmytropaduchak/simple-sbom-report
+  - install: `- uses: dmytropaduchak/simple-sbom-report@v0.1.0`
+
+### Project management
+
+- [simple-hotfix-gate](https://github.com/marketplace/actions/simple-hotfix-gate): Release-branch PRs need hotfix label/ticket
+  - repo: https://github.com/dmytropaduchak/simple-hotfix-gate
+  - install: `- uses: dmytropaduchak/simple-hotfix-gate@v0.1.0`
+- [simple-issue-close-suggest](https://github.com/marketplace/actions/simple-issue-close-suggest): Suggest issues to close from “fixes #” + title tokens
+  - repo: https://github.com/dmytropaduchak/simple-issue-close-suggest
+  - install: `- uses: dmytropaduchak/simple-issue-close-suggest@v0.1.0`
+- [simple-label-suggest](https://github.com/marketplace/actions/simple-label-suggest): Suggest labels from changed path prefixes
+  - repo: https://github.com/dmytropaduchak/simple-label-suggest
+  - install: `- uses: dmytropaduchak/simple-label-suggest@v0.1.0`
+- [simple-ticket-validate](https://github.com/marketplace/actions/simple-ticket-validate): PR must reference issue/Jira/Linear key
+  - repo: https://github.com/dmytropaduchak/simple-ticket-validate
+  - install: `- uses: dmytropaduchak/simple-ticket-validate@v0.1.0`
+
+### Publishing
+
+- [simple-breaking-report](https://github.com/marketplace/actions/simple-breaking-report): BREAKING CHANGE / ! commits between tags
+  - repo: https://github.com/dmytropaduchak/simple-breaking-report
+  - install: `- uses: dmytropaduchak/simple-breaking-report@v0.1.0`
+- [simple-changelog-report](https://github.com/marketplace/actions/simple-changelog-report): Changelog for tag/SHA range
+  - repo: https://github.com/dmytropaduchak/simple-changelog-report
+  - install: `- uses: dmytropaduchak/simple-changelog-report@v0.1.0`
+- [simple-release-check](https://github.com/marketplace/actions/simple-release-check): Release hygiene
+  - repo: https://github.com/dmytropaduchak/simple-release-check
+  - install: `- uses: dmytropaduchak/simple-release-check@v0.1.0`
+
+### Security
+
+- [simple-branch-risk](https://github.com/marketplace/actions/simple-branch-risk): Default branch protection
+  - repo: https://github.com/dmytropaduchak/simple-branch-risk
+  - install: `- uses: dmytropaduchak/simple-branch-risk@v0.1.0`
+- [simple-coverage-check](https://github.com/marketplace/actions/simple-coverage-check): Coverage drop vs base
+  - repo: https://github.com/dmytropaduchak/simple-coverage-check
+  - install: `- uses: dmytropaduchak/simple-coverage-check@v0.1.0`
+- [simple-dependency-risk](https://github.com/marketplace/actions/simple-dependency-risk): Risky dependency upgrades
+  - repo: https://github.com/dmytropaduchak/simple-dependency-risk
+  - install: `- uses: dmytropaduchak/simple-dependency-risk@v0.1.0`
+- [simple-dockerfile-risk](https://github.com/marketplace/actions/simple-dockerfile-risk): Dockerfile risk
+  - repo: https://github.com/dmytropaduchak/simple-dockerfile-risk
+  - install: `- uses: dmytropaduchak/simple-dockerfile-risk@v0.1.0`
+- [simple-env-risk](https://github.com/marketplace/actions/simple-env-risk): Env/credential files in PR
+  - repo: https://github.com/dmytropaduchak/simple-env-risk
+  - install: `- uses: dmytropaduchak/simple-env-risk@v0.1.0`
+- [simple-eval-audit](https://github.com/marketplace/actions/simple-eval-audit): Dangerous dynamic code: eval, Function(, exec, pickle.loads, yaml.load
+  - repo: https://github.com/dmytropaduchak/simple-eval-audit
+  - install: `- uses: dmytropaduchak/simple-eval-audit@v0.1.0`
+- [simple-gitignore-audit](https://github.com/marketplace/actions/simple-gitignore-audit): Sensitive paths added but missing from .gitignore/.dockerignore
+  - repo: https://github.com/dmytropaduchak/simple-gitignore-audit
+  - install: `- uses: dmytropaduchak/simple-gitignore-audit@v0.1.0`
+- [simple-iam-risk](https://github.com/marketplace/actions/simple-iam-risk): Cloud IaC least privilege
+  - repo: https://github.com/dmytropaduchak/simple-iam-risk
+  - install: `- uses: dmytropaduchak/simple-iam-risk@v0.1.0`
+- [simple-injection-scan](https://github.com/marketplace/actions/simple-injection-scan): Prompt injection in PR: jailbreak phrases + hidden instructions (HTML comments, ZWSP/RTL/homoglyphs)
+  - repo: https://github.com/dmytropaduchak/simple-injection-scan
+  - install: `- uses: dmytropaduchak/simple-injection-scan@v0.1.0`
+- [simple-k8s-risk](https://github.com/marketplace/actions/simple-k8s-risk): Unsafe K8s manifests
+  - repo: https://github.com/dmytropaduchak/simple-k8s-risk
+  - install: `- uses: dmytropaduchak/simple-k8s-risk@v0.1.0`
+- [simple-license-risk](https://github.com/marketplace/actions/simple-license-risk): Copyleft in lockfiles
+  - repo: https://github.com/dmytropaduchak/simple-license-risk
+  - install: `- uses: dmytropaduchak/simple-license-risk@v0.1.0`
+- [simple-lifecycle-audit](https://github.com/marketplace/actions/simple-lifecycle-audit): Install/build hooks across ecosystems: package.json scripts (npm/yarn/pnpm), composer, pip/poetry, cargo build.rs
+  - repo: https://github.com/dmytropaduchak/simple-lifecycle-audit
+  - install: `- uses: dmytropaduchak/simple-lifecycle-audit@v0.1.0`
+- [simple-lockfile-risk](https://github.com/marketplace/actions/simple-lockfile-risk): OSV CVEs in lockfiles
+  - repo: https://github.com/dmytropaduchak/simple-lockfile-risk
+  - install: `- uses: dmytropaduchak/simple-lockfile-risk@v0.1.0`
+- [simple-mcp-audit](https://github.com/marketplace/actions/simple-mcp-audit): MCP configs granting shell/fs/network tools without allowlist
+  - repo: https://github.com/dmytropaduchak/simple-mcp-audit
+  - install: `- uses: dmytropaduchak/simple-mcp-audit@v0.1.0`
+- [simple-owners-audit](https://github.com/marketplace/actions/simple-owners-audit): Changed paths missing CODEOWNERS
+  - repo: https://github.com/dmytropaduchak/simple-owners-audit
+  - install: `- uses: dmytropaduchak/simple-owners-audit@v0.1.0`
+- [simple-permission-risk](https://github.com/marketplace/actions/simple-permission-risk): Broad workflow permissions
+  - repo: https://github.com/dmytropaduchak/simple-permission-risk
+  - install: `- uses: dmytropaduchak/simple-permission-risk@v0.1.0`
+- [simple-schema-risk](https://github.com/marketplace/actions/simple-schema-risk): Dangerous DB migrations
+  - repo: https://github.com/dmytropaduchak/simple-schema-risk
+  - install: `- uses: dmytropaduchak/simple-schema-risk@v0.1.0`
+- [simple-secret-risk](https://github.com/marketplace/actions/simple-secret-risk): PR diff secrets
+  - repo: https://github.com/dmytropaduchak/simple-secret-risk
+  - install: `- uses: dmytropaduchak/simple-secret-risk@v0.1.0`
+- [simple-sql-audit](https://github.com/marketplace/actions/simple-sql-audit): Dangerous SQL patterns (DELETE/UPDATE w/o WHERE, concat)
+  - repo: https://github.com/dmytropaduchak/simple-sql-audit
+  - install: `- uses: dmytropaduchak/simple-sql-audit@v0.1.0`
+- [simple-workflow-risk](https://github.com/marketplace/actions/simple-workflow-risk): Workflow YAML risk
+  - repo: https://github.com/dmytropaduchak/simple-workflow-risk
+  - install: `- uses: dmytropaduchak/simple-workflow-risk@v0.1.0`
+
+### Testing
+
+- [simple-a11y-check](https://github.com/marketplace/actions/simple-a11y-check): Accessibility regressions
+  - repo: https://github.com/dmytropaduchak/simple-a11y-check
+  - install: `- uses: dmytropaduchak/simple-a11y-check@v0.1.0`
+- [simple-snapshot-audit](https://github.com/marketplace/actions/simple-snapshot-audit): Snapshots changed without test change
+  - repo: https://github.com/dmytropaduchak/simple-snapshot-audit
+  - install: `- uses: dmytropaduchak/simple-snapshot-audit@v0.1.0`
+- [simple-test-report](https://github.com/marketplace/actions/simple-test-report): Test XML/JSON summary
+  - repo: https://github.com/dmytropaduchak/simple-test-report
+  - install: `- uses: dmytropaduchak/simple-test-report@v0.1.0`
+
+### Utilities
+
+- [simple-loc-report](https://github.com/marketplace/actions/simple-loc-report): Whole-repo language + LOC
+  - repo: https://github.com/dmytropaduchak/simple-loc-report
+  - install: `- uses: dmytropaduchak/simple-loc-report@v0.1.0`
