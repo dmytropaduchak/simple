@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dmytropaduchak.github.io/simple-actions/actions.json
+Sitemap: https://dmytropaduchak.github.io/simple/actions.json

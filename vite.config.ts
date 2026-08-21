@@ -6,9 +6,9 @@ import tailwindcss from "@tailwindcss/vite"
 
 const root = path.dirname(fileURLToPath(import.meta.url))
 
-// GitHub Pages project site: https://dmytropaduchak.github.io/simple-actions/
+// GitHub Pages project site: https://dmytropaduchak.github.io/simple/
 export default defineConfig({
-  base: "/simple-actions/",
+  base: "/simple/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

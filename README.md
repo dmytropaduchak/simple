@@ -2,7 +2,7 @@
 
 One-page catalog of published `simple-*` GitHub Actions.
 
-**Live:** https://dmytropaduchak.github.io/simple-actions/
+**Live:** https://dmytropaduchak.github.io/simple/
 
 ## For humans
 
@@ -28,7 +28,7 @@ npm run dev
 npm run build
 ```
 
-GitHub Pages deploys from `main` via `.github/workflows/pages.yml` (`base: /simple-actions/`).
+GitHub Pages deploys from `main` via `.github/workflows/pages.yml` (`base: /simple/`).
 
 ## Sync catalog
 

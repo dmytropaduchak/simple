@@ -2,7 +2,7 @@
   "title": "Simple Actions",
   "description": "Small GitHub Actions for PR risk, quality, and CI hygiene. Catalog for humans and AI agents.",
   "owner": "dmytropaduchak",
-  "site": "https://dmytropaduchak.github.io/simple-actions/",
+  "site": "https://dmytropaduchak.github.io/simple/",
   "updated": "2026-08-21",
   "count": 52,
   "actions": [

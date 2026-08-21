@@ -12,7 +12,7 @@ export default function App() {
 
       <header className="relative z-10 flex items-center justify-between px-4 py-3 md:px-6">
         <p className="text-xs tracking-wide text-muted-foreground uppercase">
-          dmytropaduchak / simple-actions
+          dmytropaduchak / simple
         </p>
         <ThemeToggle />
       </header>

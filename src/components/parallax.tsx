@@ -89,7 +89,7 @@ export default function Parallax() {
     >
       <Particles
         key={color}
-        id="simple-actions-parallax"
+        id="simple-parallax"
         className="!absolute inset-0 size-full"
         options={options}
       />

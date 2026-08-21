@@ -2,9 +2,9 @@
 
 > Small GitHub Actions for PR risk, quality, and CI hygiene.
 
-Site: https://dmytropaduchak.github.io/simple-actions/
+Site: https://dmytropaduchak.github.io/simple/
 Owner: https://github.com/dmytropaduchak
-Machine catalog: https://dmytropaduchak.github.io/simple-actions/actions.json
+Machine catalog: https://dmytropaduchak.github.io/simple/actions.json
 Updated: 2026-08-21
 Count: 52
 
