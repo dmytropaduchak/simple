@@ -22,6 +22,18 @@ export function CatalogLinks({ className }: { className?: string }) {
   return (
     <div className={cn("flex flex-wrap gap-2", className)}>
       <a
+        className={cn(
+          buttonVariants({ variant: "default", size: "sm" }),
+          "bg-foreground text-background hover:bg-foreground/90",
+        )}
+        href={MARKETPLACE_URL}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <GitHubMark className="size-3.5" />
+        GitHub Marketplace
+      </a>
+      <a
         className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
         href={`${import.meta.env.BASE_URL}actions.json`}
         target="_blank"
@@ -36,15 +48,6 @@ export function CatalogLinks({ className }: { className?: string }) {
         rel="noreferrer"
       >
         llms.txt
-      </a>
-      <a
-        className={cn(buttonVariants({ variant: "default", size: "sm" }))}
-        href={MARKETPLACE_URL}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <GitHubMark className="size-3.5" />
-        GitHub Marketplace
       </a>
     </div>
   )
