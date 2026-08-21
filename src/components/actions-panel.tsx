@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react"
-import { StoreIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import catalog from "@/data/actions.json"
 
@@ -81,7 +80,7 @@ export function ActionsPanel() {
                       href={action.marketplace}
                       target="_blank"
                       rel="noreferrer"
-                      className="group flex items-start justify-between gap-3 rounded-lg px-2 py-2 transition-colors hover:bg-muted/70"
+                      className="group block rounded-lg px-2 py-2 transition-colors hover:bg-muted/70"
                     >
                       <div className="min-w-0 flex flex-col gap-0.5">
                         <span className="truncate font-medium text-sm">
@@ -91,10 +90,6 @@ export function ActionsPanel() {
                           {action.description}
                         </span>
                       </div>
-                      <StoreIcon
-                        aria-label="GitHub Marketplace"
-                        className="mt-0.5 size-3.5 shrink-0 opacity-40 transition-opacity group-hover:opacity-90"
-                      />
                     </a>
                   </li>
                 ))}
