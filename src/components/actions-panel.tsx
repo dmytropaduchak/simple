@@ -5,8 +5,6 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import catalog from "@/data/actions.json"
 
-type Action = (typeof catalog.actions)[number]
-
 function subcategoryOf(name: string) {
   const slug = name.startsWith("simple-") ? name.slice("simple-".length) : name
   const dash = slug.lastIndexOf("-")
