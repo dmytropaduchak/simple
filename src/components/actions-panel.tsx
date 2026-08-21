@@ -1,4 +1,4 @@
-import { ExternalLinkIcon } from "lucide-react"
+import { StoreIcon } from "lucide-react"
 import catalog from "@/data/actions.json"
 
 type Action = (typeof catalog.actions)[number]
@@ -42,7 +42,10 @@ export function ActionsPanel() {
                           {action.description}
                         </span>
                       </div>
-                      <ExternalLinkIcon className="mt-0.5 size-3.5 shrink-0 opacity-40 transition-opacity group-hover:opacity-90" />
+                      <StoreIcon
+                        aria-label="GitHub Marketplace"
+                        className="mt-0.5 size-3.5 shrink-0 opacity-40 transition-opacity group-hover:opacity-90"
+                      />
                     </a>
                   </li>
                 ))}
