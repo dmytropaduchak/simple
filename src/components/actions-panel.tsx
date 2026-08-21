@@ -32,8 +32,8 @@ export function ActionsPanel() {
   const groups = groupByCategory(filtered)
 
   return (
-    <div className="flex max-h-[min(70svh,36rem)] min-h-0 w-full flex-col gap-3 overflow-hidden rounded-xl border border-border/60 bg-background/70 p-3 backdrop-blur-sm md:max-h-[min(72svh,40rem)] md:p-4">
-      <div className="scrollbar-none flex shrink-0 gap-1.5 overflow-x-auto pb-0.5">
+    <div className="flex max-h-[min(48svh,22rem)] min-h-0 w-full flex-col gap-2.5 overflow-hidden rounded-xl border border-border/60 bg-background/70 p-2.5 backdrop-blur-sm md:max-h-[min(52svh,24rem)] md:p-3">
+      <div className="flex shrink-0 flex-wrap gap-1.5">
         {categories.map((name) => {
           const isActive = category === name
           return (
@@ -42,7 +42,7 @@ export function ActionsPanel() {
               type="button"
               onClick={() => setCategory(name)}
               className={cn(
-                "inline-flex h-6 shrink-0 items-center rounded-full border px-2.5 text-xs font-medium transition-colors",
+                "inline-flex h-6 items-center rounded-full border px-2.5 text-xs font-medium transition-colors",
                 isActive
                   ? "border-transparent bg-primary text-primary-foreground"
                   : "border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground",
@@ -65,28 +65,28 @@ export function ActionsPanel() {
       </div>
 
       <div className="scrollbar-none min-h-0 flex-1 overflow-y-auto overscroll-contain">
-        <div className="flex flex-col gap-6 pb-1">
+        <div className="flex flex-col gap-4 pb-1">
           {groups.map(([groupName, actions]) => (
-            <section key={groupName} className="flex flex-col gap-2">
+            <section key={groupName} className="flex flex-col gap-1.5">
               {category === ALL ? (
                 <h2 className="text-xs font-medium tracking-wider text-muted-foreground uppercase">
                   {groupName}
                 </h2>
               ) : null}
-              <ul className="flex flex-col gap-1.5">
+              <ul className="flex flex-col gap-0.5">
                 {actions.map((action) => (
                   <li key={action.id}>
                     <a
                       href={action.marketplace}
                       target="_blank"
                       rel="noreferrer"
-                      className="group block rounded-lg px-2 py-2 transition-colors hover:bg-muted/70"
+                      className="group block rounded-md px-2 py-1.5 transition-colors hover:bg-muted/70"
                     >
                       <div className="min-w-0 flex flex-col gap-0.5">
-                        <span className="truncate font-medium text-sm">
+                        <span className="truncate font-medium text-sm leading-tight">
                           {action.name}
                         </span>
-                        <span className="text-xs leading-snug text-muted-foreground">
+                        <span className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           {action.description}
                         </span>
                       </div>
