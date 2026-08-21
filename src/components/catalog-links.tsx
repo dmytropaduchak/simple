@@ -38,7 +38,7 @@ export function CatalogLinks({ className }: { className?: string }) {
         llms.txt
       </a>
       <a
-        className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
+        className={cn(buttonVariants({ variant: "default", size: "sm" }))}
         href={MARKETPLACE_URL}
         target="_blank"
         rel="noreferrer"
