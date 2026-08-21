@@ -21,10 +21,6 @@ export default function App() {
         <div className="grid w-full max-w-sm items-center gap-8 md:max-w-5xl md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-10">
           <div className="hidden min-w-0 overflow-hidden pr-1 md:block animate-in fade-in slide-in-from-left-4 duration-500">
             <StoicQuote text={QUOTE} />
-            <p className="mt-6 max-w-sm text-sm text-muted-foreground">
-              Catalog of published GitHub Actions. Built for humans and AI
-              agents — see actions.json and llms.txt.
-            </p>
           </div>
 
           <div className="flex w-full min-w-0 flex-col justify-center animate-in fade-in slide-in-from-right-4 duration-500">
