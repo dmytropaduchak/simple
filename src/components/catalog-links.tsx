@@ -1,5 +1,9 @@
+import { GithubIcon } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+
+const MARKETPLACE_URL =
+  "https://github.com/marketplace?query=dmytropaduchak&type=actions"
 
 export function CatalogLinks({ className }: { className?: string }) {
   return (
@@ -22,11 +26,12 @@ export function CatalogLinks({ className }: { className?: string }) {
       </a>
       <a
         className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
-        href="https://github.com/dmytropaduchak?tab=repositories&q=simple-"
+        href={MARKETPLACE_URL}
         target="_blank"
         rel="noreferrer"
       >
-        GitHub
+        <GithubIcon data-icon="inline-start" />
+        GitHub Marketplace
       </a>
     </div>
   )
