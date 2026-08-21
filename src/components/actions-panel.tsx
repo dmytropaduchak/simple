@@ -1,8 +1,6 @@
 import { ExternalLinkIcon } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { cn } from "@/lib/utils"
 import catalog from "@/data/actions.json"
 
 type Action = (typeof catalog.actions)[number]
@@ -67,33 +65,6 @@ export function ActionsPanel() {
             </section>
           ))}
         </div>
-      </div>
-
-      <div className="flex shrink-0 flex-wrap gap-2">
-        <a
-          className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
-          href={`${import.meta.env.BASE_URL}actions.json`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          actions.json
-        </a>
-        <a
-          className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
-          href={`${import.meta.env.BASE_URL}llms.txt`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          llms.txt
-        </a>
-        <a
-          className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
-          href="https://github.com/dmytropaduchak?tab=repositories&q=simple-"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub
-        </a>
       </div>
     </div>
   )
