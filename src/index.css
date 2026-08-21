@@ -212,7 +212,7 @@
   }
 
   html {
-    @apply antialiased font-sans;
+    @apply min-h-svh bg-background antialiased font-sans;
   }
 
   body {
@@ -228,5 +228,53 @@
 
   .scrollbar-none::-webkit-scrollbar {
     display: none;
+  }
+
+  .accent-color-input {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .accent-color-input::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 9999px;
+  }
+
+  .accent-color-input::-webkit-color-swatch {
+    border: none;
+    border-radius: 9999px;
+  }
+
+  .accent-color-input::-moz-color-swatch {
+    border: none;
+    border-radius: 9999px;
+  }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .text-primary-foreground {
+    color: var(--primary-foreground);
+  }
+
+  .border-primary {
+    border-color: var(--primary);
+  }
+
+  .fill-primary {
+    fill: var(--primary);
+  }
+
+  .stroke-primary {
+    stroke: var(--primary);
+  }
+
+  .ring-primary {
+    --tw-ring-color: var(--primary);
   }
 }

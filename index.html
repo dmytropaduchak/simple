@@ -52,6 +52,22 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script>
+      (function () {
+        try {
+          var scales = { small: "100%", medium: "112.5%", large: "125%" }
+          var size = "small"
+          var raw = localStorage.getItem("dmytropaduchak.simple.appearance")
+          if (raw) {
+            var parsed = JSON.parse(raw)
+            if (scales[parsed.uiSize]) size = parsed.uiSize
+          }
+          var root = document.documentElement
+          root.dataset.uiSize = size
+          root.style.fontSize = scales[size]
+        } catch (e) {}
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

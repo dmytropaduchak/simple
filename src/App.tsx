@@ -10,7 +10,7 @@ const AUTHOR = "Marcus Aurelius"
 
 export default function App() {
   return (
-    <div className="relative z-10 flex min-h-svh flex-col bg-transparent">
+    <div className="relative z-10 flex min-h-svh flex-col bg-background">
       <Parallax />
 
       <header className="relative z-10 flex items-center justify-between px-4 py-3 md:px-6">
