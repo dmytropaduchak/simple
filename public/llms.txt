@@ -5,8 +5,8 @@
 Site: https://dmytropaduchak.github.io/simple/
 Owner: https://github.com/dmytropaduchak
 Machine catalog: https://dmytropaduchak.github.io/simple/actions.json
-Updated: 2026-08-21
-Count: 52
+Updated: 2026-08-22
+Count: 62
 
 ## For AI agents
 
@@ -48,12 +48,21 @@ Count: 52
 - [simple-dup-scan](https://github.com/marketplace/actions/simple-dup-scan): Copy-paste duplicates in PR diff (hashed windows)
   - repo: https://github.com/dmytropaduchak/simple-dup-scan
   - install: `- uses: dmytropaduchak/simple-dup-scan@v0.1.0`
+- [simple-error-swallow-scan](https://github.com/marketplace/actions/simple-error-swallow-scan): Empty catch/except blocks in PR
+  - repo: https://github.com/dmytropaduchak/simple-error-swallow-scan
+  - install: `- uses: dmytropaduchak/simple-error-swallow-scan@v0.1.0`
+- [simple-json-validate](https://github.com/marketplace/actions/simple-json-validate): Changed JSON must be valid
+  - repo: https://github.com/dmytropaduchak/simple-json-validate
+  - install: `- uses: dmytropaduchak/simple-json-validate@v0.1.0`
 - [simple-link-lint](https://github.com/marketplace/actions/simple-link-lint): Broken/dead links in changed Markdown (and optional HTML) before merge
   - repo: https://github.com/dmytropaduchak/simple-link-lint
   - install: `- uses: dmytropaduchak/simple-link-lint@v0.1.0`
 - [simple-policy-check](https://github.com/marketplace/actions/simple-policy-check): Org policy-as-code
   - repo: https://github.com/dmytropaduchak/simple-policy-check
   - install: `- uses: dmytropaduchak/simple-policy-check@v0.1.0`
+- [simple-pr-size-check](https://github.com/marketplace/actions/simple-pr-size-check): Fail/warn when PR exceeds max files or LOC
+  - repo: https://github.com/dmytropaduchak/simple-pr-size-check
+  - install: `- uses: dmytropaduchak/simple-pr-size-check@v0.1.0`
 - [simple-readme-audit](https://github.com/marketplace/actions/simple-readme-audit): Code/version paths changed, README not
   - repo: https://github.com/dmytropaduchak/simple-readme-audit
   - install: `- uses: dmytropaduchak/simple-readme-audit@v0.1.0`
@@ -66,6 +75,9 @@ Count: 52
 - [simple-typo-lint](https://github.com/marketplace/actions/simple-typo-lint): Typos via dictionary (comments/strings/ids)
   - repo: https://github.com/dmytropaduchak/simple-typo-lint
   - install: `- uses: dmytropaduchak/simple-typo-lint@v0.1.0`
+- [simple-yaml-lint](https://github.com/marketplace/actions/simple-yaml-lint): Invalid workflow/action YAML syntax and basic structure
+  - repo: https://github.com/dmytropaduchak/simple-yaml-lint
+  - install: `- uses: dmytropaduchak/simple-yaml-lint@v0.1.0`
 
 ### Code review
 
@@ -105,6 +117,9 @@ Count: 52
 - [simple-label-suggest](https://github.com/marketplace/actions/simple-label-suggest): Suggest labels from changed path prefixes
   - repo: https://github.com/dmytropaduchak/simple-label-suggest
   - install: `- uses: dmytropaduchak/simple-label-suggest@v0.1.0`
+- [simple-required-label-gate](https://github.com/marketplace/actions/simple-required-label-gate): PR missing required labels before merge
+  - repo: https://github.com/dmytropaduchak/simple-required-label-gate
+  - install: `- uses: dmytropaduchak/simple-required-label-gate@v0.1.0`
 - [simple-ticket-validate](https://github.com/marketplace/actions/simple-ticket-validate): PR must reference issue/Jira/Linear key
   - repo: https://github.com/dmytropaduchak/simple-ticket-validate
   - install: `- uses: dmytropaduchak/simple-ticket-validate@v0.1.0`
@@ -114,6 +129,9 @@ Count: 52
 - [simple-breaking-report](https://github.com/marketplace/actions/simple-breaking-report): BREAKING CHANGE / ! commits between tags
   - repo: https://github.com/dmytropaduchak/simple-breaking-report
   - install: `- uses: dmytropaduchak/simple-breaking-report@v0.1.0`
+- [simple-changelog-gate](https://github.com/marketplace/actions/simple-changelog-gate): Version/release files changed but CHANGELOG not updated
+  - repo: https://github.com/dmytropaduchak/simple-changelog-gate
+  - install: `- uses: dmytropaduchak/simple-changelog-gate@v0.1.0`
 - [simple-changelog-report](https://github.com/marketplace/actions/simple-changelog-report): Changelog for tag/SHA range
   - repo: https://github.com/dmytropaduchak/simple-changelog-report
   - install: `- uses: dmytropaduchak/simple-changelog-report@v0.1.0`
@@ -123,9 +141,15 @@ Count: 52
 
 ### Security
 
+- [simple-auth-bypass-scan](https://github.com/marketplace/actions/simple-auth-bypass-scan): AUTH_DISABLED / skipAuth / dangerouslyAllow patterns in PR
+  - repo: https://github.com/dmytropaduchak/simple-auth-bypass-scan
+  - install: `- uses: dmytropaduchak/simple-auth-bypass-scan@v0.1.0`
 - [simple-branch-risk](https://github.com/marketplace/actions/simple-branch-risk): Default branch protection
   - repo: https://github.com/dmytropaduchak/simple-branch-risk
   - install: `- uses: dmytropaduchak/simple-branch-risk@v0.1.0`
+- [simple-cors-audit](https://github.com/marketplace/actions/simple-cors-audit): CORS allow-origin * or reflected origin in changed API config
+  - repo: https://github.com/dmytropaduchak/simple-cors-audit
+  - install: `- uses: dmytropaduchak/simple-cors-audit@v0.1.0`
 - [simple-coverage-check](https://github.com/marketplace/actions/simple-coverage-check): Coverage drop vs base
   - repo: https://github.com/dmytropaduchak/simple-coverage-check
   - install: `- uses: dmytropaduchak/simple-coverage-check@v0.1.0`
@@ -144,6 +168,9 @@ Count: 52
 - [simple-gitignore-audit](https://github.com/marketplace/actions/simple-gitignore-audit): Sensitive paths added but missing from .gitignore/.dockerignore
   - repo: https://github.com/dmytropaduchak/simple-gitignore-audit
   - install: `- uses: dmytropaduchak/simple-gitignore-audit@v0.1.0`
+- [simple-hardcoded-crypto-scan](https://github.com/marketplace/actions/simple-hardcoded-crypto-scan): Hard-coded IV, salt, or JWT secret in PR diff
+  - repo: https://github.com/dmytropaduchak/simple-hardcoded-crypto-scan
+  - install: `- uses: dmytropaduchak/simple-hardcoded-crypto-scan@v0.1.1`
 - [simple-iam-risk](https://github.com/marketplace/actions/simple-iam-risk): Cloud IaC least privilege
   - repo: https://github.com/dmytropaduchak/simple-iam-risk
   - install: `- uses: dmytropaduchak/simple-iam-risk@v0.1.0`
@@ -201,3 +228,6 @@ Count: 52
 - [simple-loc-report](https://github.com/marketplace/actions/simple-loc-report): Whole-repo language + LOC
   - repo: https://github.com/dmytropaduchak/simple-loc-report
   - install: `- uses: dmytropaduchak/simple-loc-report@v0.1.0`
+- [simple-pr-template-gate](https://github.com/marketplace/actions/simple-pr-template-gate): PR body missing required template sections (Test plan / Risk)
+  - repo: https://github.com/dmytropaduchak/simple-pr-template-gate
+  - install: `- uses: dmytropaduchak/simple-pr-template-gate@v0.1.0`

@@ -3,8 +3,8 @@
   "description": "Small GitHub Actions for PR risk, quality, and CI hygiene. Catalog for humans and AI agents.",
   "owner": "dmytropaduchak",
   "site": "https://dmytropaduchak.github.io/simple/",
-  "updated": "2026-08-21",
-  "count": 52,
+  "updated": "2026-08-22",
+  "count": 62,
   "actions": [
     {
       "id": "simple-agent-audit",
@@ -88,6 +88,24 @@
       "install": "- uses: dmytropaduchak/simple-dup-scan@v0.1.0"
     },
     {
+      "id": "simple-error-swallow-scan",
+      "name": "simple-error-swallow-scan",
+      "description": "Empty catch/except blocks in PR",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-error-swallow-scan",
+      "marketplace": "https://github.com/marketplace/actions/simple-error-swallow-scan",
+      "install": "- uses: dmytropaduchak/simple-error-swallow-scan@v0.1.0"
+    },
+    {
+      "id": "simple-json-validate",
+      "name": "simple-json-validate",
+      "description": "Changed JSON must be valid",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-json-validate",
+      "marketplace": "https://github.com/marketplace/actions/simple-json-validate",
+      "install": "- uses: dmytropaduchak/simple-json-validate@v0.1.0"
+    },
+    {
       "id": "simple-link-lint",
       "name": "simple-link-lint",
       "description": "Broken/dead links in changed Markdown (and optional HTML) before merge",
@@ -104,6 +122,15 @@
       "repo": "https://github.com/dmytropaduchak/simple-policy-check",
       "marketplace": "https://github.com/marketplace/actions/simple-policy-check",
       "install": "- uses: dmytropaduchak/simple-policy-check@v0.1.0"
+    },
+    {
+      "id": "simple-pr-size-check",
+      "name": "simple-pr-size-check",
+      "description": "Fail/warn when PR exceeds max files or LOC",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-pr-size-check",
+      "marketplace": "https://github.com/marketplace/actions/simple-pr-size-check",
+      "install": "- uses: dmytropaduchak/simple-pr-size-check@v0.1.0"
     },
     {
       "id": "simple-readme-audit",
@@ -140,6 +167,15 @@
       "repo": "https://github.com/dmytropaduchak/simple-typo-lint",
       "marketplace": "https://github.com/marketplace/actions/simple-typo-lint",
       "install": "- uses: dmytropaduchak/simple-typo-lint@v0.1.0"
+    },
+    {
+      "id": "simple-yaml-lint",
+      "name": "simple-yaml-lint",
+      "description": "Invalid workflow/action YAML syntax and basic structure",
+      "category": "Code quality",
+      "repo": "https://github.com/dmytropaduchak/simple-yaml-lint",
+      "marketplace": "https://github.com/marketplace/actions/simple-yaml-lint",
+      "install": "- uses: dmytropaduchak/simple-yaml-lint@v0.1.0"
     },
     {
       "id": "simple-diff-report",
@@ -223,6 +259,15 @@
       "install": "- uses: dmytropaduchak/simple-label-suggest@v0.1.0"
     },
     {
+      "id": "simple-required-label-gate",
+      "name": "simple-required-label-gate",
+      "description": "PR missing required labels before merge",
+      "category": "Project management",
+      "repo": "https://github.com/dmytropaduchak/simple-required-label-gate",
+      "marketplace": "https://github.com/marketplace/actions/simple-required-label-gate",
+      "install": "- uses: dmytropaduchak/simple-required-label-gate@v0.1.0"
+    },
+    {
       "id": "simple-ticket-validate",
       "name": "simple-ticket-validate",
       "description": "PR must reference issue/Jira/Linear key",
@@ -239,6 +284,15 @@
       "repo": "https://github.com/dmytropaduchak/simple-breaking-report",
       "marketplace": "https://github.com/marketplace/actions/simple-breaking-report",
       "install": "- uses: dmytropaduchak/simple-breaking-report@v0.1.0"
+    },
+    {
+      "id": "simple-changelog-gate",
+      "name": "simple-changelog-gate",
+      "description": "Version/release files changed but CHANGELOG not updated",
+      "category": "Publishing",
+      "repo": "https://github.com/dmytropaduchak/simple-changelog-gate",
+      "marketplace": "https://github.com/marketplace/actions/simple-changelog-gate",
+      "install": "- uses: dmytropaduchak/simple-changelog-gate@v0.1.0"
     },
     {
       "id": "simple-changelog-report",
@@ -259,6 +313,15 @@
       "install": "- uses: dmytropaduchak/simple-release-check@v0.1.0"
     },
     {
+      "id": "simple-auth-bypass-scan",
+      "name": "simple-auth-bypass-scan",
+      "description": "AUTH_DISABLED / skipAuth / dangerouslyAllow patterns in PR",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-auth-bypass-scan",
+      "marketplace": "https://github.com/marketplace/actions/simple-auth-bypass-scan",
+      "install": "- uses: dmytropaduchak/simple-auth-bypass-scan@v0.1.0"
+    },
+    {
       "id": "simple-branch-risk",
       "name": "simple-branch-risk",
       "description": "Default branch protection",
@@ -266,6 +329,15 @@
       "repo": "https://github.com/dmytropaduchak/simple-branch-risk",
       "marketplace": "https://github.com/marketplace/actions/simple-branch-risk",
       "install": "- uses: dmytropaduchak/simple-branch-risk@v0.1.0"
+    },
+    {
+      "id": "simple-cors-audit",
+      "name": "simple-cors-audit",
+      "description": "CORS allow-origin * or reflected origin in changed API config",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-cors-audit",
+      "marketplace": "https://github.com/marketplace/actions/simple-cors-audit",
+      "install": "- uses: dmytropaduchak/simple-cors-audit@v0.1.0"
     },
     {
       "id": "simple-coverage-check",
@@ -320,6 +392,15 @@
       "repo": "https://github.com/dmytropaduchak/simple-gitignore-audit",
       "marketplace": "https://github.com/marketplace/actions/simple-gitignore-audit",
       "install": "- uses: dmytropaduchak/simple-gitignore-audit@v0.1.0"
+    },
+    {
+      "id": "simple-hardcoded-crypto-scan",
+      "name": "simple-hardcoded-crypto-scan",
+      "description": "Hard-coded IV, salt, or JWT secret in PR diff",
+      "category": "Security",
+      "repo": "https://github.com/dmytropaduchak/simple-hardcoded-crypto-scan",
+      "marketplace": "https://github.com/marketplace/actions/simple-hardcoded-crypto-scan",
+      "install": "- uses: dmytropaduchak/simple-hardcoded-crypto-scan@v0.1.1"
     },
     {
       "id": "simple-iam-risk",
@@ -473,6 +554,15 @@
       "repo": "https://github.com/dmytropaduchak/simple-loc-report",
       "marketplace": "https://github.com/marketplace/actions/simple-loc-report",
       "install": "- uses: dmytropaduchak/simple-loc-report@v0.1.0"
+    },
+    {
+      "id": "simple-pr-template-gate",
+      "name": "simple-pr-template-gate",
+      "description": "PR body missing required template sections (Test plan / Risk)",
+      "category": "Utilities",
+      "repo": "https://github.com/dmytropaduchak/simple-pr-template-gate",
+      "marketplace": "https://github.com/marketplace/actions/simple-pr-template-gate",
+      "install": "- uses: dmytropaduchak/simple-pr-template-gate@v0.1.0"
     }
   ]
 }
