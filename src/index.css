@@ -230,26 +230,6 @@
     display: none;
   }
 
-  .accent-color-input {
-    appearance: none;
-    -webkit-appearance: none;
-  }
-
-  .accent-color-input::-webkit-color-swatch-wrapper {
-    padding: 0;
-    border-radius: 9999px;
-  }
-
-  .accent-color-input::-webkit-color-swatch {
-    border: none;
-    border-radius: 9999px;
-  }
-
-  .accent-color-input::-moz-color-swatch {
-    border: none;
-    border-radius: 9999px;
-  }
-
   .catalog-tag-category {
     background-color: oklch(0.93 0.09 var(--tag-hue));
     color: oklch(0.38 0.14 var(--tag-hue));
