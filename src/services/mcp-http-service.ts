@@ -18,7 +18,7 @@ export class McpHttpService {
     if (request.method === "OPTIONS") return this.options()
 
     const mcpCatalog = new McpCatalog()
-    const definition = mcpCatalog.definition(this.slug)
+    const definition = await mcpCatalog.definition(this.slug)
     if (!definition) {
       throw new HttpError(404, `MCP not found: ${this.slug}`)
     }

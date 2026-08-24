@@ -1,33 +1,40 @@
-import { IdnaService } from "@/services/mcps/idna-service"
-import { PhoneService } from "@/services/mcps/phone-service"
-import { PslService } from "@/services/mcps/psl-service"
-import { TokensService } from "@/services/mcps/tokens-service"
-import { UnicodeService } from "@/services/mcps/unicode-service"
 import type { McpServer } from "@modelcontextprotocol/server"
 
 export type McpDefinition = {
   register(server: McpServer): void
 }
 
+const LIVE_SLUGS = new Set(["psl", "idna", "phone", "unicode", "tokens"])
+
 export class McpCatalog {
-  definition(slug: string): McpDefinition | undefined {
+  isLive(slug: string) {
+    return LIVE_SLUGS.has(slug)
+  }
+
+  async definition(slug: string): Promise<McpDefinition | undefined> {
     switch (slug) {
-      case "psl":
+      case "psl": {
+        const { PslService } = await import("@/services/mcps/psl-service")
         return new PslService()
-      case "idna":
+      }
+      case "idna": {
+        const { IdnaService } = await import("@/services/mcps/idna-service")
         return new IdnaService()
-      case "phone":
+      }
+      case "phone": {
+        const { PhoneService } = await import("@/services/mcps/phone-service")
         return new PhoneService()
-      case "unicode":
+      }
+      case "unicode": {
+        const { UnicodeService } = await import("@/services/mcps/unicode-service")
         return new UnicodeService()
-      case "tokens":
+      }
+      case "tokens": {
+        const { TokensService } = await import("@/services/mcps/tokens-service")
         return new TokensService()
+      }
       default:
         return undefined
     }
-  }
-
-  isLive(slug: string) {
-    return Boolean(this.definition(slug))
   }
 }
