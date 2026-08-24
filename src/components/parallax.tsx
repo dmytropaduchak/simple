@@ -111,7 +111,7 @@ export default function Parallax() {
     >
       <Particles
         key={color}
-        id="simple-parallax"
+        id="brainiac-parallax"
         className="!absolute inset-0 size-full"
         options={options}
       />

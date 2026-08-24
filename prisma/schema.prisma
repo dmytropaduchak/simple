@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Mcp {
+  id          Int       @id @default(autoincrement())
+  slug        String    @unique
+  name        String
+  description String
+  category    String
+  kind        String
+  version     String    @default("v1")
+  isPublished Boolean   @default(true) @map("is_published")
+  tools       McpTool[]
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@map("mcps")
+}
+
+model McpTool {
+  id          Int    @id @default(autoincrement())
+  mcpId       Int    @map("mcp_id")
+  name        String
+  description String
+  sortOrder   Int    @default(0) @map("sort_order")
+  mcp         Mcp    @relation(fields: [mcpId], references: [id], onDelete: Cascade)
+
+  @@index([mcpId])
+  @@map("mcp_tools")
+}

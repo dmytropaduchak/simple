@@ -1,21 +1,26 @@
 import Parallax from "@/components/parallax"
 import { StoicQuote } from "@/components/stoic-quote"
 import { ThemeSettingsDrawer } from "@/components/theme-settings-drawer"
-import { ActionsPanel } from "@/components/actions-panel"
-import { ActionsHeading } from "@/components/actions-heading"
+import { McpsPanel } from "@/components/mcps-panel"
+import { McpsHeading } from "@/components/mcps-heading"
 import { CatalogLinks } from "@/components/catalog-links"
+import { CatalogService } from "@/services/catalog-service"
+
+export const dynamic = "force-dynamic"
 
 const QUOTE = "What stands in the way becomes the way."
 const AUTHOR = "Marcus Aurelius"
 
-export default function App() {
+export default async function HomePage() {
+  const mcps = await new CatalogService().listPublished()
+
   return (
     <div className="relative z-10 flex min-h-svh flex-col bg-background">
       <Parallax />
 
       <header className="relative z-10 flex items-center justify-between px-4 py-3 md:px-6">
         <p className="text-xs tracking-wide text-muted-foreground uppercase">
-          dmytropaduchak / simple
+          brainiac.software
         </p>
         <ThemeSettingsDrawer />
       </header>
@@ -32,8 +37,8 @@ export default function App() {
               <StoicQuote text={QUOTE} author={AUTHOR} />
               <CatalogLinks />
             </div>
-            <ActionsHeading />
-            <ActionsPanel />
+            <McpsHeading count={mcps.length} />
+            <McpsPanel mcps={mcps} />
           </div>
         </div>
       </main>

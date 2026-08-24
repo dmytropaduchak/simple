@@ -1,3 +1,5 @@
+"use client"
+
 import type { ReactElement, SVGProps } from "react"
 import { CircleCheck, SlidersHorizontal } from "lucide-react"
 

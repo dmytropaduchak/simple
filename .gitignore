@@ -9,7 +9,11 @@ node_modules
 # Build
 dist
 dist-ssr
+.next
+out
+.vercel
 *.local
+tsconfig.tsbuildinfo
 
 # Editor
 .vscode/*

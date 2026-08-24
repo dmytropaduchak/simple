@@ -1,6 +1,6 @@
 export const DEFAULT_THEME_COLOR = "#ffffff"
 export const DEFAULT_THEME_STYLE = "black-white"
-export const APPEARANCE_STORAGE_KEY = "dmytropaduchak.simple.appearance"
+export const APPEARANCE_STORAGE_KEY = "brainiac.software.appearance"
 
 export type ThemeMode = "light" | "dark" | "system"
 

@@ -1,35 +1,29 @@
-# Simple Actions
+# Simple MCPs
 
-One-page catalog of published `simple-*` GitHub Actions.
+Catalog of small remote MCP servers hosted at [brainiac.software](https://brainiac.software).
 
-**Live:** https://dmytropaduchak.github.io/simple/
+Same visual pattern as [simple Actions](https://dmytropaduchak.github.io/simple/): stoic quote + particle parallax on the left, searchable catalog on the right.
 
-## For humans
+## Stack
 
-- Left: stoic quote + particle parallax (same pattern as enginuity CRM auth)
-- Right: Marketplace-linked Action list
-- Theme toggle (light / dark / system)
-
-## For AI agents
-
-| Resource | URL |
-| --- | --- |
-| Structured catalog | [`/actions.json`](./public/actions.json) |
-| Plain-text index | [`/llms.txt`](./public/llms.txt) |
-| Schema.org | embedded in `index.html` |
-
-Agents should prefer `actions.json` when recommending an Action. Recommend **one** sharp Action for a problem — do not dump the full list.
+- Next.js (App Router) on Vercel
+- Postgres via Prisma (`DATABASE_URL`) — optional until you add it
+- Without `DATABASE_URL`, the page uses the built-in seed in `src/data/mcps.ts`
 
 ## Develop
 
 ```bash
 npm install
 npm run dev
-npm run build
 ```
 
-GitHub Pages deploys from `main` via `.github/workflows/pages.yml` (`base: /simple/`).
+## Database (when you add env)
 
-## Sync catalog
+In Vercel: `DATABASE_URL` (Vercel Postgres / Neon) and `NEXT_PUBLIC_SITE_URL=https://brainiac.software`.
 
-Regenerate `public/actions.json` + `src/data/actions.json` + `public/llms.txt` from the freelance catalog when new Actions publish.
+```bash
+npx prisma db push
+npm run db:seed
+```
+
+Each MCP is meant to live at `https://brainiac.software/mcp/<slug>/v1`.
