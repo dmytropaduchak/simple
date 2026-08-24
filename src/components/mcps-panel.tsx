@@ -61,6 +61,7 @@ function CatalogTag({
 }
 
 const ALL = "All"
+const LIVE = "Live"
 
 export function McpsPanel({ mcps }: { mcps: CatalogMcp[] }) {
   const [category, setCategory] = useState(ALL)
@@ -68,6 +69,7 @@ export function McpsPanel({ mcps }: { mcps: CatalogMcp[] }) {
 
   const categories = [
     ALL,
+    LIVE,
     ...[...new Set(mcps.map((mcp) => mcp.category))].sort((a, b) =>
       a.localeCompare(b),
     ),
@@ -75,7 +77,11 @@ export function McpsPanel({ mcps }: { mcps: CatalogMcp[] }) {
 
   const q = query.trim().toLowerCase()
   const byCategory =
-    category === ALL ? mcps : mcps.filter((mcp) => mcp.category === category)
+    category === ALL
+      ? mcps
+      : category === LIVE
+        ? mcps.filter((mcp) => mcp.isLive)
+        : mcps.filter((mcp) => mcp.category === category)
   const filtered = q
     ? byCategory.filter((mcp) => {
         const toolBlob = mcp.tools.map((tool) => tool.name).join(" ")
@@ -153,6 +159,11 @@ export function McpsPanel({ mcps }: { mcps: CatalogMcp[] }) {
                       <span className="min-w-0 truncate font-medium text-sm leading-tight group-hover:text-primary">
                         {mcp.name}
                       </span>
+                      {mcp.isLive ? (
+                        <Badge variant="default" className="h-5">
+                          Live
+                        </Badge>
+                      ) : null}
                       <CatalogTag kind="category" label={mcp.category} />
                       <CatalogTag kind="subcategory" label={mcp.kind} />
                     </div>

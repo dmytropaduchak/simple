@@ -239,15 +239,16 @@ export const MCP_SEED: McpSeed[] = [
     kind: "Inspect",
     version: "v1",
     tools: [
-      { name: "inspect", description: "Name, script, category, and code point for a character." },
+      { name: "inspect", description: "Code point, hex, and scripts for characters in a string." },
       { name: "normalize", description: "NFC / NFKC form of a string." },
-      { name: "confusables", description: "Characters that visually spoof the input (UTS #39)." },
+      { name: "confusables", description: "Scripts in the string and whether they are mixed." },
     ],
   },
   {
     slug: "tokens",
     name: "tokens",
-    description: "Count and split tokens for Claude, GPT, and Gemini encodings.",
+    description:
+      "Count and split tokens for cl100k_base (GPT-4) and o200k_base (GPT-4o).",
     category: "Agent",
     kind: "Count",
     version: "v1",

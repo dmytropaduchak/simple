@@ -26,4 +26,27 @@ npx prisma db push
 npm run db:seed
 ```
 
-Each MCP is meant to live at `https://brainiac.software/mcp/<slug>/v1`.
+## API
+
+Each live MCP is at `https://brainiac.software/mcp/<slug>/v1` (Streamable HTTP).
+
+Thin route handlers construct a service, call it, and map errors. Services throw the original `Error`; routes log it and return `{ error: message }` with the real status. Logs look like `[ERROR][app][api][mcp][psl] …`.
+
+- `src/app/mcp/[slug]/v1/route.ts` — GET / POST / DELETE / OPTIONS
+- `src/services/mcp-http-service.ts` — CORS, 404, `mcp-handler`
+- `src/services/mcp-catalog.ts` — which slugs are live
+- `src/services/mcps/*-service.ts` — 2–5 tools each; throw on bad input
+
+Live now: `psl`, `idna`, `phone`, `unicode`, `tokens`. Other catalog slugs return `404` until they ship.
+
+Cursor connect snippet:
+
+```json
+{
+  "mcpServers": {
+    "psl": {
+      "url": "https://brainiac.software/mcp/psl/v1"
+    }
+  }
+}
+```

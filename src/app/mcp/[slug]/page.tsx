@@ -2,6 +2,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import Parallax from "@/components/parallax"
 import { ThemeSettingsDrawer } from "@/components/theme-settings-drawer"
+import { EndpointCard } from "@/components/endpoint-card"
 import { CatalogService } from "@/services/catalog-service"
 import { Badge } from "@/components/ui/badge"
 
@@ -36,6 +37,9 @@ export default async function McpDetailPage({
             <h1 className="text-3xl font-medium tracking-tight md:text-4xl">
               {mcp.name}
             </h1>
+            <Badge variant={mcp.isLive ? "default" : "secondary"}>
+              {mcp.isLive ? "Live" : "Coming soon"}
+            </Badge>
             <Badge variant="outline">{mcp.category}</Badge>
             <Badge variant="outline">{mcp.kind}</Badge>
           </div>
@@ -44,12 +48,11 @@ export default async function McpDetailPage({
           </p>
         </div>
 
-        <div className="rounded-xl border border-border/60 bg-background/70 p-3 backdrop-blur-sm">
-          <p className="mb-1 text-xs tracking-wide text-muted-foreground uppercase">
-            Endpoint
-          </p>
-          <code className="block break-all text-sm">{mcp.endpoint}</code>
-        </div>
+        <EndpointCard
+          endpoint={mcp.endpoint}
+          slug={mcp.slug}
+          isLive={mcp.isLive}
+        />
 
         <ul className="flex flex-col gap-2">
           {mcp.tools.map((tool) => (

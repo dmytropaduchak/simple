@@ -19,12 +19,23 @@ export async function GET() {
     "- Prefer mcps.json for structured install metadata.",
     `- Each server is at ${siteUrl()}/mcp/<slug>/v1`,
     "- Each MCP exposes 2–5 tools. Pick one sharp server — do not dump the full catalog.",
+    "- Live servers answer JSON-RPC over Streamable HTTP. Coming-soon slugs return 404.",
     "",
-    "## MCPs",
+    "## Live MCPs",
     "",
   ]
 
-  for (const mcp of mcps) {
+  const live = mcps.filter((mcp) => mcp.isLive)
+  const soon = mcps.filter((mcp) => !mcp.isLive)
+
+  for (const mcp of live) {
+    lines.push(`- [${mcp.name}](${mcp.endpoint}): ${mcp.description}`)
+    lines.push(`  - tools: ${mcp.tools.map((tool) => tool.name).join(", ")}`)
+  }
+
+  lines.push("", "## Coming soon", "")
+
+  for (const mcp of soon) {
     lines.push(`- [${mcp.name}](${mcp.endpoint}): ${mcp.description}`)
     lines.push(`  - tools: ${mcp.tools.map((tool) => tool.name).join(", ")}`)
   }

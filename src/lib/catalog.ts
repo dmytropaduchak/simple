@@ -15,6 +15,7 @@ export type CatalogMcp = {
   kind: string
   version: string
   endpoint: string
+  isLive: boolean
   tools: CatalogTool[]
 }
 
@@ -28,6 +29,7 @@ export function seedCatalog(): CatalogMcp[] {
     kind: mcp.kind,
     version: mcp.version,
     endpoint: mcpEndpoint(mcp.slug, mcp.version),
+    isLive: false,
     tools: mcp.tools,
   }))
 }

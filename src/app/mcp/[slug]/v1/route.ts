@@ -1,24 +1,52 @@
-import { NextResponse } from "next/server"
-import { CatalogService } from "@/services/catalog-service"
+import type { NextRequest } from "next/server"
+import { McpHttpService } from "@/services/mcp-http-service"
 
 export const dynamic = "force-dynamic"
+export const runtime = "nodejs"
+export const maxDuration = 60
 
-export async function GET(
-  _request: Request,
-  { params }: { params: Promise<{ slug: string }> },
-) {
-  const { slug } = await params
-  const mcp = await new CatalogService().getBySlug(slug)
-  if (!mcp) {
-    return NextResponse.json({ error: "Not found" }, { status: 404 })
+type RouteContext = { params: Promise<{ slug: string }> }
+
+export async function GET(request: NextRequest, context: RouteContext) {
+  const { slug } = await context.params
+  try {
+    const mcpHttpService = new McpHttpService(slug)
+    return await mcpHttpService.handle(request)
+  } catch (err) {
+    const mcpHttpService = new McpHttpService(slug)
+    return mcpHttpService.error(err)
   }
+}
 
-  return NextResponse.json({
-    name: mcp.name,
-    description: mcp.description,
-    url: mcp.endpoint,
-    transport: "streamable-http",
-    version: mcp.version,
-    tools: mcp.tools,
-  })
+export async function POST(request: NextRequest, context: RouteContext) {
+  const { slug } = await context.params
+  try {
+    const mcpHttpService = new McpHttpService(slug)
+    return await mcpHttpService.handle(request)
+  } catch (err) {
+    const mcpHttpService = new McpHttpService(slug)
+    return mcpHttpService.error(err)
+  }
+}
+
+export async function DELETE(request: NextRequest, context: RouteContext) {
+  const { slug } = await context.params
+  try {
+    const mcpHttpService = new McpHttpService(slug)
+    return await mcpHttpService.handle(request)
+  } catch (err) {
+    const mcpHttpService = new McpHttpService(slug)
+    return mcpHttpService.error(err)
+  }
+}
+
+export async function OPTIONS(request: NextRequest, context: RouteContext) {
+  const { slug } = await context.params
+  try {
+    const mcpHttpService = new McpHttpService(slug)
+    return await mcpHttpService.handle(request)
+  } catch (err) {
+    const mcpHttpService = new McpHttpService(slug)
+    return mcpHttpService.error(err)
+  }
 }

@@ -13,6 +13,7 @@ const AUTHOR = "Marcus Aurelius"
 
 export default async function HomePage() {
   const mcps = await new CatalogService().listPublished()
+  const liveCount = mcps.filter((mcp) => mcp.isLive).length
 
   return (
     <div className="relative z-10 flex min-h-svh flex-col bg-background">
@@ -37,7 +38,7 @@ export default async function HomePage() {
               <StoicQuote text={QUOTE} author={AUTHOR} />
               <CatalogLinks />
             </div>
-            <McpsHeading count={mcps.length} />
+            <McpsHeading count={mcps.length} liveCount={liveCount} />
             <McpsPanel mcps={mcps} />
           </div>
         </div>
